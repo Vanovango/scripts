@@ -7,11 +7,8 @@ path_to_apps = {'Telegram': "C:/Users/voyte/AppData/Roaming/Telegram Desktop/Tel
 
 
 try:
-    Popen(path_to_apps['Telegram'])
-    Popen(path_to_apps['Music'])
-    Popen(path_to_apps['Browser'])
-    Popen(path_to_apps['PyCharm'])
-
+    for app_name in path_to_apps.keys():
+        Popen(path_to_apps[app_name])
 
 except NameError:
-    print("Ошибка запуска приложений, проверьте корректность пути")
+    print("Ошибка запуска приложений, проверьте корректность имени файла")
